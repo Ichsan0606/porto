@@ -13,19 +13,19 @@ export default function Contact() {
     },
     {
       name: "Email",
-      link: "mailto:abbahmitraglobal@gmail.com",
+      link: "mailto:abbah.mitraglobal@gmail.com?subject=Permintaan%20Penawaran&body=Halo%20Abbah%20Mitra%20Global%2C%0A%0ASaya%20ingin%20bertanya%20tentang%20jasa%20kontraktor%20Anda.%0A%0ATerima%20kasih.",
       icon: <Mail size={28} />,
       color: "text-red-500",
     },
     {
       name: "Instagram",
-      link: "https://instagram.com/abbahmitraglobal",
+      link: "https://instagram.com/abbahmitraglobal?igsh=NHY1MmsybmltOGRp&utm_source=qr",
       icon: <Instagram size={28} />,
       color: "text-pink-500",
     },
     {
       name: "YouTube",
-      link: "https://youtube.com/@abbahmitraglobal",
+      link: "https://youtube.com/@abbahmitraglobal2843",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
