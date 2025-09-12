@@ -12,12 +12,12 @@ import {
 
 export default function Services() {
   const services = [
-    { name: "Design 3D Interior & Eksterior", icon: <MdDesignServices className="text-4xl text-blue-600" /> },
-    { name: "Renovasi Rumah & Bangunan", icon: <MdHomeRepairService className="text-4xl text-green-600" /> },
-    { name: "Arsitektur & Perencanaan", icon: <MdArchitecture className="text-4xl text-indigo-600" /> },
-    { name: "Furniture Custom", icon: <MdChair className="text-4xl text-orange-600" /> },
-    { name: "Atap & Eksterior", icon: <MdRoofing className="text-4xl text-red-600" /> },
-    { name: "Kontraktor Umum", icon: <MdBuild className="text-4xl text-gray-700" /> },
+    { name: "Design 3D Interior & Eksterior", icon: MdDesignServices, color: "text-blue-600" },
+    { name: "Renovasi Rumah & Bangunan", icon: MdHomeRepairService, color: "text-green-600" },
+    { name: "Arsitektur & Perencanaan", icon: MdArchitecture, color: "text-indigo-600" },
+    { name: "Furniture Custom", icon: MdChair, color: "text-orange-600" },
+    { name: "Atap & Eksterior", icon: MdRoofing, color: "text-red-600" },
+    { name: "Kontraktor Umum", icon: MdBuild, color: "text-gray-700" },
   ];
 
   const container = {
@@ -38,7 +38,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-6 py-20"
+      className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-6 py-20"
     >
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -60,21 +60,22 @@ export default function Services() {
           viewport={{ once: false, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl"
         >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={item}
-              whileHover={{
-                scale: 1.08,
-                backgroundColor: "#2563eb",
-                color: "#fff",
-              }}
-              className="px-6 py-8 bg-white rounded-xl shadow text-center font-medium text-gray-700 transition cursor-pointer flex flex-col items-center"
-            >
-              {service.icon}
-              <span className="mt-4 text-lg">{service.name}</span>
-            </motion.div>
-          ))}
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={index}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                className="group px-6 py-8 bg-white rounded-xl shadow text-center font-medium text-gray-700 transition cursor-pointer flex flex-col items-center hover:bg-blue-600 hover:text-white"
+              >
+                <Icon className={`text-4xl ${service.color} group-hover:text-white`} />
+                <span className="mt-4 text-lg">{service.name}</span>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </AnimatePresence>
     </section>

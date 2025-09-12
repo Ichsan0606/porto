@@ -58,7 +58,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col justify-center items-center bg-white px-6 py-20 border"
+      className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-6 py-20 border"
     >
       {/* Title */}
       <motion.h2

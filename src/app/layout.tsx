@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   title: "Abbah Mitra Global",
   description: "Kontraktor Interior & Eksterior",
   icons: {
-    icon: "/logo/logo-amg.jpg", // 👈 pakai jpg ini
+    icon: "/logo/amg.png", 
   },
   verification: {
-    google: "4BixW-ps3BkiJnkAzNlaOjpUf7AFL_H83h0_EKj64zY", // 👈 taruh di sini
+    google: "4BixW-ps3BkiJnkAzNlaOjpUf7AFL_H83h0_EKj64zY",
   },
 };
 
@@ -30,9 +30,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/logo/logo-amg.jpg" type="image/jpg" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

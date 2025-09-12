@@ -47,7 +47,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-6 py-20"
+      className="min-h-screen flex flex-col justify-center items-center bg-white px-6 py-20"
     >
       {/* Title */}
       <motion.h2
@@ -57,7 +57,7 @@ export default function Projects() {
         viewport={{ once: true }}
         className="text-4xl font-bold text-gray-800 mb-10"
       >
-        Interior Design Projects
+        Interior Projects
       </motion.h2>
 
       {/* Projects grid */}
