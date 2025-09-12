@@ -8,7 +8,7 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
+  <!-- <url>
     <loc>https://abbahitraglobal.vercel.app/about</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -20,6 +20,6 @@
     <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
+  </url> -->
 
 </urlset>
