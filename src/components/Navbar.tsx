@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +47,17 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-600">Test</h1>
+        {/* <h1 className="text-2xl font-bold text-blue-600">Test</h1> */}
+        <a href="#home" className="flex items-center space-x-2">
+          <Image
+            src="/logo.jpg" // 👈 taruh logo di folder public/logo.png
+            alt="Logo"
+            width={40}
+            height={40}
+            className="rounded"
+          />
+          <span className="text-xl font-bold text-blue-600">Ichsan</span>
+        </a>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
