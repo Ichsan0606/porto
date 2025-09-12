@@ -32,7 +32,7 @@ export default function About() {
             </h2>
 
             {/* Description */}
-            <p className="max-w-3xl text-lg text-gray-600 leading-relaxed">
+            <p className="max-w-3xl text-lg text-gray-600 leading-relaxed mb-8">
               <span className="font-semibold text-blue-600">
                 Abbah Mitra Global
               </span>{" "}
@@ -48,6 +48,18 @@ export default function About() {
               Dengan tim profesional, kami berkomitmen menghadirkan hasil
               terbaik yang fungsional, estetis, dan tahan lama.
             </p>
+
+            {/* Video YouTube */}
+            <div className="w-full max-w-3xl aspect-video rounded-2xl shadow-lg overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/3nccgQ6p4VQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

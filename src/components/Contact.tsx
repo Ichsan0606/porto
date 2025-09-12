@@ -7,25 +7,25 @@ export default function Contact() {
   const contacts = [
     {
       name: "WhatsApp",
-      link: "https://wa.me/6281234567890", // ganti nomor WA kamu
+      link: "https://wa.me/6287821334043", 
       icon: <Phone size={28} />,
       color: "text-green-500",
     },
     {
       name: "Email",
-      link: "mailto:yourmail@example.com",
+      link: "mailto:abbahmitraglobal@gmail.com",
       icon: <Mail size={28} />,
       color: "text-red-500",
     },
     {
       name: "Instagram",
-      link: "https://instagram.com/yourusername",
+      link: "https://instagram.com/abbahmitraglobal",
       icon: <Instagram size={28} />,
       color: "text-pink-500",
     },
     {
       name: "YouTube",
-      link: "https://youtube.com/@yourchannel",
+      link: "https://youtube.com/@abbahmitraglobal",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ export default function Contact() {
     },
     {
       name: "TikTok",
-      link: "https://tiktok.com/@yourusername",
+      link: "https://tiktok.com/@abbahmitraglobal",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
