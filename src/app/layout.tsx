@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Abbah Mitra Global",
   description: "Kontraktor Interior & Eksterior",
-  verification: {
-    google: "4BixW-ps3BkiJnkAzNlaOjpUf7AFL_H83h0_EKj64zY", // 👈 taruh di sini
-  },
+  // verification: {
+  //   google: "4BixW-ps3BkiJnkAzNlaOjpUf7AFL_H83h0_EKj64zY", // 👈 taruh di sini
+  // },
 };
 
 export default function RootLayout({
