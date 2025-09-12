@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 20);
 
       // cek section aktif
-      const sections = ["home", "about","skills", "projects", "contact"];
+      const sections = ["home", "about","services", "projects", "contact"];
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
@@ -34,7 +35,7 @@ export default function Navbar() {
   const navLinks = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
+    { id: "services", label: "Services" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
@@ -48,16 +49,19 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         {/* <h1 className="text-2xl font-bold text-blue-600">Test</h1> */}
-        <a href="#home" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/logo.jpg" // 👈 taruh logo di folder public/logo.png
+            src="/logo/logo-amg.jpg" // logo taruh di folder public
             alt="Logo"
             width={40}
             height={40}
             className="rounded"
           />
-          <span className="text-xl font-bold text-blue-600">Ichsan</span>
-        </a>
+          <span className="text-xl font-bold text-blue-600">
+            Abbah Mitra Global
+          </span>
+        </Link>
+
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">

@@ -10,7 +10,7 @@ export default function Hero() {
       className="min-h-screen flex flex-col justify-center items-center text-center bg-gray-100 px-6"
     >
       <AnimatePresence mode="wait">
-        {/* Nama */}
+        {/* Judul */}
         <motion.div
           key="hero-title"
           initial={{ opacity: 0, y: -40 }}
@@ -20,7 +20,8 @@ export default function Hero() {
           viewport={{ once: false }}
         >
           <h1 className="text-5xl font-extrabold text-gray-800">
-            Hi, I’m <span className="text-blue-600">Mohamad Ichsan Maulana</span>
+            Selamat Datang di{" "}
+            <span className="text-blue-600">Abbah Mitra Global</span>
           </h1>
         </motion.div>
 
@@ -36,11 +37,11 @@ export default function Hero() {
         >
           <TypeAnimation
             sequence={[
-              "Frontend Developer",
+              "Kontraktor Interior",
               2000,
-              "Web Enthusiast",
+              "Kontraktor Eksterior",
               2000,
-              "Next.js + Tailwind Lover",
+              "Solusi Bangun & Renovasi",
               2000,
             ]}
             wrapper="span"
@@ -60,8 +61,12 @@ export default function Hero() {
           className="mt-4 text-lg text-gray-600 max-w-2xl"
         >
           <p>
-            I’m passionate about building modern, responsive web apps that bring
-            ideas to life 🚀
+            Abbah Mitra Global merupakan kontraktor yang ahli dalam{" "}
+            <span className="font-semibold text-blue-600">
+              interior dan eksterior
+            </span>
+            . Kami berkomitmen memberikan hasil terbaik dengan desain modern,
+            fungsional, dan berkualitas tinggi.
           </p>
         </motion.div>
 
@@ -78,7 +83,7 @@ export default function Hero() {
             href="#projects"
             className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition"
           >
-            View My Project
+            Lihat Proyek Kami
           </a>
         </motion.div>
       </AnimatePresence>

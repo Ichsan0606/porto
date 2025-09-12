@@ -1,18 +1,23 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { FaReact, FaNodeJs, FaGithub, FaJs } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  MdDesignServices,
+  MdHomeRepairService,
+  MdArchitecture,
+  MdChair,
+  MdRoofing,
+  MdBuild,
+} from "react-icons/md";
 
-export default function Skills() {
-  const skills = [
-    { name: "Next.js", icon: <SiNextdotjs className="text-4xl" /> },
-    { name: "React", icon: <FaReact className="text-4xl text-blue-500" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-4xl text-sky-400" /> },
-    { name: "TypeScript", icon: <SiTypescript className="text-4xl text-blue-600" /> },
-    { name: "JavaScript", icon: <FaJs className="text-4xl text-yellow-400" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-4xl text-green-600" /> },
-    { name: "Git & GitHub", icon: <FaGithub className="text-4xl text-gray-800" /> },
+export default function Services() {
+  const services = [
+    { name: "Design 3D Interior & Eksterior", icon: <MdDesignServices className="text-4xl text-blue-600" /> },
+    { name: "Renovasi Rumah & Bangunan", icon: <MdHomeRepairService className="text-4xl text-green-600" /> },
+    { name: "Arsitektur & Perencanaan", icon: <MdArchitecture className="text-4xl text-indigo-600" /> },
+    { name: "Furniture Custom", icon: <MdChair className="text-4xl text-orange-600" /> },
+    { name: "Atap & Eksterior", icon: <MdRoofing className="text-4xl text-red-600" /> },
+    { name: "Kontraktor Umum", icon: <MdBuild className="text-4xl text-gray-700" /> },
   ];
 
   const container = {
@@ -32,7 +37,7 @@ export default function Skills() {
 
   return (
     <section
-      id="skills"
+      id="services"
       className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-6 py-20"
     >
       <motion.h2
@@ -43,7 +48,7 @@ export default function Skills() {
         viewport={{ once: false }}
         className="text-4xl font-bold text-gray-800 mb-10"
       >
-        My Skills
+        Our Services
       </motion.h2>
 
       <AnimatePresence>
@@ -52,10 +57,10 @@ export default function Skills() {
           initial="hidden"
           whileInView="show"
           exit="exit"
-          viewport={{ once: false, amount: 0.2 }} // muncul & hilang lagi saat discroll
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl"
+          viewport={{ once: false, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl"
         >
-          {skills.map((skill, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={index}
               variants={item}
@@ -64,10 +69,10 @@ export default function Skills() {
                 backgroundColor: "#2563eb",
                 color: "#fff",
               }}
-              className="px-6 py-6 bg-white rounded-xl shadow text-center font-medium text-gray-700 transition cursor-pointer flex flex-col items-center"
+              className="px-6 py-8 bg-white rounded-xl shadow text-center font-medium text-gray-700 transition cursor-pointer flex flex-col items-center"
             >
-              {skill.icon}
-              <span className="mt-3">{skill.name}</span>
+              {service.icon}
+              <span className="mt-4 text-lg">{service.name}</span>
             </motion.div>
           ))}
         </motion.div>

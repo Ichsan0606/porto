@@ -27,15 +27,26 @@ export default function About() {
             className="flex flex-col items-center"
           >
             {/* Title */}
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">About Me</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+              About Me
+            </h2>
 
             {/* Description */}
             <p className="max-w-3xl text-lg text-gray-600 leading-relaxed">
-              I am a passionate frontend developer with a strong focus on building
-              modern, responsive, and user-friendly web applications. Skilled in{" "}
-              <span className="font-semibold text-blue-600">Next.js</span> and{" "}
-              <span className="font-semibold text-blue-600">Tailwind CSS</span>, I
-              love turning ideas into reality through clean and efficient code.
+              <span className="font-semibold text-blue-600">
+                Abbah Mitra Global
+              </span>{" "}
+              adalah kontraktor yang berfokus pada solusi{" "}
+              <span className="font-semibold text-gray-800">
+                interior dan eksterior
+              </span>{" "}
+              dengan standar kualitas tinggi. Kami berpengalaman dalam{" "}
+              <span className="font-semibold text-gray-800">
+                desain 3D, pembangunan, renovasi, hingga furniture custom
+              </span>{" "}
+              yang disesuaikan dengan kebutuhan klien.  
+              Dengan tim profesional, kami berkomitmen menghadirkan hasil
+              terbaik yang fungsional, estetis, dan tahan lama.
             </p>
           </motion.div>
         )}
