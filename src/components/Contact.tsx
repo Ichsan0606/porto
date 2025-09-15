@@ -48,7 +48,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-6 py-20"
+      className="min-h-screen flex flex-col justify-center items-center bg-white px-6 py-20"
     >
       {/* Title */}
       <motion.h2
@@ -76,10 +76,12 @@ export default function Contact() {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition text-center"
+              className="group flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition text-center hover:bg-blue-600 hover:text-white"
             >
-              <div className={`mb-3 ${item.color}`}>{item.icon}</div>
-              <p className="font-semibold text-gray-800">{item.name}</p>
+              <div className={`mb-3 ${item.color} group-hover:text-white`}>
+                {item.icon}
+              </div>
+              <p className="text-gray-800 font-semibold">{item.name}</p>
             </motion.a>
           ))}
         </div>

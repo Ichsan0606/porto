@@ -47,7 +47,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center bg-white px-6 py-20"
+      className="min-h-screen flex flex-col justify-center items-center bg-grey-100  px-6 py-20"
     >
       {/* Title */}
       <motion.h2
