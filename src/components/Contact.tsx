@@ -81,7 +81,9 @@ export default function Contact() {
               <div className={`mb-3 ${item.color} group-hover:text-white`}>
                 {item.icon}
               </div>
-              <p className="text-gray-800 font-semibold">{item.name}</p>
+              <p className="text-gray-800 font-semibold group-hover:text-white transition-colors duration-300">
+                {item.name}
+              </p>
             </motion.a>
           ))}
         </div>

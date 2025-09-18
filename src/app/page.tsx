@@ -1,12 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Team from "@/components/Team";
+import Gallery from "@/components/Gallery";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
-import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Team/>
       <Gallery/>
       <Services />
       <Projects />

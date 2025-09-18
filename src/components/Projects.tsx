@@ -47,7 +47,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center bg-grey-100  px-6 py-20"
+      className="min-h-screen flex flex-col justify-center items-center bg-white  px-6 py-20"
     >
       {/* Title */}
       <motion.h2
@@ -72,7 +72,7 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: false, amount: 0.2 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl overflow-hidden transition relative"
+              className="bg-gray-50 rounded-xl shadow-md hover:shadow-xl overflow-hidden transition relative"
             >
               {/* Gambar */}
               <div className="w-full h-48 relative">
@@ -80,7 +80,7 @@ export default function Projects() {
                   src={project.img}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110 select-none pointer-events-none"
                 />
               </div>
 

@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: "Abbah Mitra Global",
   description: "Kontraktor Interior & Eksterior",
   icons: {
-    icon: "/logo/amg.png", 
+    icon: [
+      { url: "/logo/amg.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo/amg.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: "/logo/amg.png",
   },
   verification: {
     google: "4BixW-ps3BkiJnkAzNlaOjpUf7AFL_H83h0_EKj64zY",

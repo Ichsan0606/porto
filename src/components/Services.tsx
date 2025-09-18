@@ -38,7 +38,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="min-h-screen flex flex-col justify-center items-center bg-white px-6 py-20"
+      className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-6 py-20"
     >
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
