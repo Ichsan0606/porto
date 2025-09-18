@@ -15,7 +15,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 20);
 
       // cek section aktif
-      const sections = ["home", "about", "team", "services", "projects", "gallery", "contact"]; 
+      const sections = ["home", "about", "services", "projects", "gallery", "contact"]; 
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
@@ -35,7 +35,7 @@ export default function Navbar() {
   const navLinks = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "team", label: "Team" },
+    // { id: "team", label: "Team" },
     { id: "gallery", label: "Gallery" }, 
     { id: "services", label: "Services" },
     { id: "projects", label: "Projects" },
