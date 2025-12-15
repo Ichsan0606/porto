@@ -2,21 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://abbahitraglobal.vercel.app/</loc>
+    <loc>https://abbahmitraglobal.vercel.app/</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+<url>
+  <loc>https://abbahmitraglobal.vercel.app/</loc>
+</url>
+<url>
+  <loc>https://abbahmitraglobal.vercel.app/tentang-kami</loc>
+</url>
+<url>
+  <loc>https://abbahmitraglobal.vercel.app/layanan/interior</loc>
+</url>
+<url>
+  <loc>https://abbahmitraglobal.vercel.app/layanan/eksterior</loc>
+</url>
+<url>
+  <loc>https://abbahmitraglobal.vercel.app/portofolio</loc>
+</url>
+
   <!-- <url>
-    <loc>https://abbahitraglobal.vercel.app/about</loc>
+    <loc>https://abbahmitraglobal.vercel.app/about</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://abbahitraglobal.vercel.app/contact</loc>
+    <loc>https://abbahmitraglobal.vercel.app/contact</loc>
     <lastmod>2025-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
