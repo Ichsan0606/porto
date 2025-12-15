@@ -3,51 +3,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
-
-const projects = [
-  {
-    title: "Modern Living Room",
-    desc: "Elegant modern living room design with natural lighting and minimal furniture.",
-    link: "/",
-    img: "/projects/project-1.jpeg",
-  },
-  {
-    title: "Luxury Bedroom",
-    desc: "Cozy bedroom with warm tones and luxury furnishing for ultimate comfort.",
-    link: "/",
-    img: "/projects/project-2.jpeg",
-  },
-  {
-    title: "Minimalist Kitchen",
-    desc: "Clean minimalist kitchen with functional layout and modern appliances.",
-    link: "/",
-    img: "/projects/project-3.jpeg",
-  },
-  {
-    title: "Office Workspace",
-    desc: "Productive and stylish workspace with ergonomic furniture and storage solutions.",
-    link: "/",
-    img: "/projects/project-4.jpeg",
-  },
-  {
-    title: "Dining Room",
-    desc: "Elegant dining room with contemporary design for family and guests.",
-    link: "/",
-    img: "/projects/project-5.jpeg",
-  },
-  {
-    title: "Bathroom Design",
-    desc: "Modern bathroom design with clean lines and relaxing atmosphere.",
-    link: "/",
-    img: "/projects/project-6.jpeg",
-  },
-];
+import Link from "next/link";
+import { projects } from "@/data/projects";
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center bg-white  px-6 py-20"
+      className="min-h-screen flex flex-col justify-center items-center bg-white px-6 py-20"
     >
       {/* Title */}
       <motion.h2
@@ -60,27 +23,27 @@ export default function Projects() {
         Interior Projects
       </motion.h2>
 
-      {/* Projects grid */}
+      {/* Projects Grid */}
       <div className="grid gap-8 md:grid-cols-3 w-full max-w-6xl">
         <AnimatePresence>
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: false, amount: 0.2 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-gray-50 rounded-xl shadow-md hover:shadow-xl overflow-hidden transition relative"
+              className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition"
             >
-              {/* Gambar */}
-              <div className="w-full h-48 relative">
+              {/* Image */}
+              <div className="relative w-full h-48 overflow-hidden">
                 <Image
                   src={project.img}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110 select-none pointer-events-none"
+                  className="object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
 
@@ -89,15 +52,18 @@ export default function Projects() {
                 <h3 className="text-2xl font-semibold text-blue-600 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.desc}</p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+
+                <p className="text-gray-600 mb-4">
+                  {project.desc}
+                </p>
+
+                <Link
+                  href={`/projects/${project.slug}`}
                   className="inline-flex items-center text-blue-600 font-medium hover:underline"
                 >
-                  View Project <ExternalLink size={16} className="ml-1" />
-                </a>
+                  View Project
+                  <ExternalLink size={16} className="ml-1" />
+                </Link>
               </div>
             </motion.div>
           ))}
