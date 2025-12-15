@@ -64,15 +64,23 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <ul
+          className={`hidden md:flex space-x-6 font-medium transition-colors ${
+            isScrolled ? "text-gray-700" : "text-white"
+          }`}
+        >
           {navLinks.map((link) => (
             <li key={link.id}>
               <a
                 href={`#${link.id}`}
                 className={`transition-colors ${
                   active === link.id
-                    ? "text-blue-600 font-semibold"
-                    : "hover:text-blue-600"
+                    ? isScrolled
+                      ? "text-blue-600 font-semibold"
+                      : "text-blue-300 font-semibold"
+                    : isScrolled
+                    ? "hover:text-blue-600"
+                    : "hover:text-blue-300"
                 }`}
               >
                 {link.label}
@@ -92,7 +100,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="md:hidden bg-white shadow-md opacity-95">
           <ul className="flex flex-col space-y-4 p-6 text-gray-700 font-medium">
             {navLinks.map((link) => (
               <li key={link.id}>

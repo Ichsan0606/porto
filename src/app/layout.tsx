@@ -18,9 +18,11 @@ export const metadata: Metadata = {
     "Abbah Mitra Global adalah kontraktor interior & eksterior profesional untuk rumah, kantor, dan bangunan komersial.",
   keywords: [
     "Abbah Mitra Global",
-    "kontraktor interior",
-    "kontraktor eksterior",
-    "jasa interior",
+    "Kontraktor interior",
+    "Kontraktor eksterior",
+    "Jasa interior",
+    "Jasa Interior Bekasi",
+    "Jasa Interior Bekasi Timur",
   ],
 
   verification: {

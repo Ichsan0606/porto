@@ -2,82 +2,106 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { useEffect, useState } from "react";
+
+const slides = [
+  {
+    bg: "/banner/banner_1.jpg",
+    text: "Kontraktor Interior",
+  },
+  {
+    bg: "/banner/banner_2.jpg",
+    text: "Solusi Bangun & Renovasi",
+  },
+  {
+    bg: "/banner/banner_3.jpg",
+    text: "Kontraktor Eksterior",
+  },
+];
 
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 3000); // ganti tiap 3 detik
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-center bg-gray-100 px-6"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden"
     >
-      <AnimatePresence mode="wait">
-        {/* Judul */}
+      {/* Background */}
+      <AnimatePresence mode="sync">
         <motion.div
+          key={slides[current].bg}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${slides[current].bg})` }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2 }}
+        />
+      </AnimatePresence>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-3xl">
+        {/* Title */}
+        <motion.h1
           key="hero-title"
           initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: false }}
+          className="text-5xl font-extrabold text-white"
         >
-          <h1 className="text-5xl font-extrabold text-gray-800">
-            Selamat Datang di{" "}
-            <span className="text-blue-600">Abbah Mitra Global</span>
-          </h1>
-        </motion.div>
+          Selamat Datang di{" "}
+          <span className="text-blue-400">Abbah Mitra Global</span>
+        </motion.h1>
 
-        {/* Typing Effect */}
+        {/* Typing */}
         <motion.div
-          key="hero-typing"
+          key={`typing-${current}`}
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          viewport={{ once: false }}
-          className="mt-4 text-xl text-gray-600"
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="mt-4 text-xl text-gray-200"
         >
           <TypeAnimation
             sequence={[
-              "Kontraktor Interior",
+              slides[current].text,
               2000,
-              "Kontraktor Eksterior",
-              2000,
-              "Solusi Bangun & Renovasi",
-              2000,
+              "",
             ]}
-            wrapper="span"
             speed={50}
-            repeat={Infinity}
+            cursor={true}
           />
         </motion.div>
 
-        {/* Deskripsi */}
-        <motion.div
+        {/* Description */}
+        <motion.p
           key="hero-desc"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          viewport={{ once: false }}
-          className="mt-4 text-lg text-gray-600 max-w-2xl"
+          className="mt-4 text-lg text-gray-200"
         >
-          <p>
-            Abbah Mitra Global merupakan kontraktor yang ahli dalam{" "}
-            <span className="font-semibold text-blue-600">
-              interior dan eksterior
-            </span>
-            . Kami berkomitmen memberikan hasil terbaik dengan desain modern,
-            fungsional, dan berkualitas tinggi.
-          </p>
-        </motion.div>
+          Abbah Mitra Global merupakan kontraktor ahli interior dan eksterior.
+          Kami menghadirkan desain modern, fungsional, dan berkualitas tinggi.
+        </motion.p>
 
-        {/* Tombol */}
+        {/* Button */}
         <motion.div
           key="hero-button"
           initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.5, duration: 0.8 }}
-          viewport={{ once: false }}
         >
           <a
             href="#projects"
@@ -86,7 +110,7 @@ export default function Hero() {
             Lihat Proyek Kami
           </a>
         </motion.div>
-      </AnimatePresence>
+      </div>
     </section>
   );
 }
